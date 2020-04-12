@@ -25,13 +25,21 @@ downloadOracle () {
 
 	cat /${ORA_DEB}a* > /${ORA_DEB}
 
-	rm -f /${ORA_DEB}a*
+	
 
 }
+localOracle () {
+	cat /${ORA_DEB}a* > /${ORA_DEB}
+	rm -f /${ORA_DEB}a*
+}
+#
+# downloadOracle
+localOracle
+# change mege
 
-downloadOracle
 
 dpkg --install /${ORA_DEB}
+echo "ssss"
 rm -f /${ORA_DEB}
 
 mv /init.ora       /u01/app/oracle/product/11.2.0/xe/config/scripts
